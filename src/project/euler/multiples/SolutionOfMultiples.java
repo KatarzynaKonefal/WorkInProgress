@@ -5,7 +5,6 @@ package project.euler.multiples;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class SolutionOfMultiples {
     List<Integer> multiply = new ArrayList<Integer>();
@@ -17,12 +16,10 @@ public class SolutionOfMultiples {
         set.addAll(multiply);
         sumTheResult(set);
     }
-    private List<Integer> findMultiplyOf(int i) {
-
+    private void findMultiplyOf(int i) {
         for(int j = i ;  i < 1000;  i += j){
             multiply.add(i);
-
-        }return multiply;
+        }
     }
     private static void sumTheResult(HashSet<Integer> set) {
         int result = 0;
